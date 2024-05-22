@@ -8,7 +8,7 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         Menu menu = new Menu();
 
-        menu.main();
+        menu.runMenu();
 
     }
 }

@@ -1,6 +1,6 @@
 package Model;
 
-
+// Product Model; Model Do produto
 public class ProductModel {
     private String name, description;
     private double price;
