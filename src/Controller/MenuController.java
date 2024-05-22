@@ -29,7 +29,7 @@ public class MenuController {
             return false;
         }else if(MenuController.hasLetter(answer)){ // if the inputed option has letter; Se a resposta tem letra
             return false;
-        }else if(Integer.parseInt(answer) > 5 || Integer.parseInt(answer) < 0) {
+        }else if(Integer.parseInt(answer) > 5 || Integer.parseInt(answer) <= 0) {
             // If the option doesn't exist; Se a opção não existe
             return false;
         }else{ // If it's everything good; Se está tudo ok
