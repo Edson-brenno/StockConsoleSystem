@@ -1,5 +1,6 @@
 package Controller;
 
+import View.ProductsMenuView;
 import org.jetbrains.annotations.NotNull;
 
 public class MenuController {
@@ -34,6 +35,17 @@ public class MenuController {
             return false;
         }else{ // If it's everything good; Se está tudo ok
             return true;
+        }
+    }
+
+    public static void showTheChoosenOption(@NotNull int choosenOption){
+        switch (choosenOption){
+            case 1:
+                ProductsMenuView productsMenuView = new ProductsMenuView();
+                productsMenuView.runProductsMenu();
+                break;
+            default:
+                break;
         }
     }
 }

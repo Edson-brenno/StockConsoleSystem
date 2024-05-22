@@ -4,6 +4,7 @@ import java.util.Scanner;
 import Controller.MenuController;
 
 public class Menu {
+    private int choosedMenuOption;
     /**
      * Will show the Menus name
      * Mostra o nome do menu
@@ -39,6 +40,7 @@ public class Menu {
             answer = sc.nextLine();
             // If the option is valid; Se a opção for válida
             if(MenuController.isOptionValid(answer)){
+                this.choosedMenuOption = Integer.parseInt(answer);
                 break;
             }
         }
@@ -52,5 +54,6 @@ public class Menu {
         this.apresentation();
         this.options();
         this.askForOption();
+        MenuController.showTheChoosenOption(this.choosedMenuOption);
     }
 }
