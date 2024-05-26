@@ -2,14 +2,16 @@ package View;
 
 import java.util.Scanner;
 import Controller.MenuController;
+import View.InterfacesView.MenuInterface;
 
-public class Menu {
+public class Menu implements MenuInterface {
     private int choosedMenuOption;
     /**
      * Will show the Menus name
      * Mostra o nome do menu
      **/
-    private void apresentation(){
+    @Override
+    public void presentation(){
         System.out.println("=======================================");
         System.out.println("             Sᴛᴏᴄᴋ Sʏsᴛᴇᴍ");
         System.out.println("=======================================");
@@ -50,8 +52,9 @@ public class Menu {
     /**
      * Run the menu
      * Roda o menu**/
+    @Override
     public void runMenu(){
-        this.apresentation();
+        this.presentation();
         this.options();
         this.askForOption();
         MenuController.showTheChoosenOption(this.choosedMenuOption);
