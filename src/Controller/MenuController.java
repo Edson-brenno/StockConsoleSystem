@@ -1,6 +1,7 @@
 package Controller;
 
 import View.ProductsMenuView;
+import View.UtilitiesView.ClearConsole;
 import org.jetbrains.annotations.NotNull;
 
 public class MenuController {
@@ -41,6 +42,7 @@ public class MenuController {
     public static void showTheChoosenOption(@NotNull int choosenOption){
         switch (choosenOption){
             case 1:
+                ClearConsole.clear();
                 ProductsMenuView productsMenuView = new ProductsMenuView();
                 productsMenuView.runProductsMenu();
                 break;
