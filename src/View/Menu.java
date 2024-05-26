@@ -1,8 +1,10 @@
 package View;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import Controller.MenuController;
 import View.InterfacesView.MenuInterface;
+import View.UtilitiesView.MenuUtilitiesView;
 
 public class Menu implements MenuInterface {
     private int choosedMenuOption;
@@ -12,22 +14,17 @@ public class Menu implements MenuInterface {
      **/
     @Override
     public void presentation(){
-        System.out.println("=======================================");
-        System.out.println("             Sᴛᴏᴄᴋ Sʏsᴛᴇᴍ");
-        System.out.println("=======================================");
+        MenuUtilitiesView.MenuPresentation("Sᴛᴏᴄᴋ Sʏsᴛᴇᴍ");
     }
     /**
      * Shows the menus options
      * Mostra as opções do menu
      **/
     private void options(){
-        System.out.println("[1] See all the products");
-        System.out.println("[2] Register a new Product");
-        System.out.println("[1] Remove a Product");
-        System.out.println("[3] Product entry");
-        System.out.println("[4] Product exit");
-        System.out.println("[5] Exit");
-        System.out.println("=======================================");
+        String[] menuOptions = new String[]{"See all the products", "Register a new Product", "Remove a Product",
+        "Product entry", "Exit"};
+
+        MenuUtilitiesView.MenuOptions(menuOptions);
     }
     /**
      * Asks the user for the menu option

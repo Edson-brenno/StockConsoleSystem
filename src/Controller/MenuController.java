@@ -58,10 +58,6 @@ public class MenuController {
             case 5: // Menu of the stock exit of products; Menu sobre a saida de um produto
                 System.out.println("Welcome to product exit");
                 break;
-            case 6: // Finish the system
-                System.out.println("Bye :-)");
-                System.exit(0);
-                break;
             default: // Invalid option; Opção inválida
                 System.out.println("Invalid option");
                 break;
