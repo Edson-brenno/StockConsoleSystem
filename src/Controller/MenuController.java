@@ -41,12 +41,29 @@ public class MenuController {
 
     public static void showTheChoosenOption(@NotNull int choosenOption){
         switch (choosenOption){
-            case 1:
+            case 1: // Will list all the products; Vai listar todos os produtos
                 ClearConsole.clear();
                 ProductsMenuView productsMenuView = new ProductsMenuView();
                 productsMenuView.runProductsMenu();
                 break;
-            default:
+            case 2: // Menu Register for a new product;Menu para registro de um novo produto;
+                System.out.println("Welcome to new product register");
+                break;
+            case 3: // Will remove one product; vai remover um produto;
+                System.out.println("Welcome to remove product");
+                break;
+            case 4: // Menu of one product entry; Menu para entrada de um produto existe
+                System.out.println("Welcome to product entry");
+                break;
+            case 5: // Menu of the stock exit of products; Menu sobre a saida de um produto
+                System.out.println("Welcome to product exit");
+                break;
+            case 6: // Finish the system
+                System.out.println("Bye :-)");
+                System.exit(0);
+                break;
+            default: // Invalid option; Opção inválida
+                System.out.println("Invalid option");
                 break;
         }
     }
