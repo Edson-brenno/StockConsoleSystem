@@ -1,16 +1,19 @@
 package View;
 
-public class ProductsMenuView {
+import View.InterfacesView.MenuInterface;
+import View.UtilitiesView.MenuUtilitiesView;
+
+public class ProductsMenuView implements MenuInterface{
     /**
      * Show the Menus name
      * Mostra o nome do menu**/
-    private void productsMenuApresentation(){
-        System.out.println("=======================================");
-        System.out.println("             Aʟʟ ᴛʜᴇ ᴘʀᴏᴅᴜᴄᴛs");
-        System.out.println("=======================================");
+    @Override
+    public void presentation(){
+        MenuUtilitiesView.MenuPresentation("Aʟʟ ᴛʜᴇ ᴘʀᴏᴅᴜᴄᴛs");
     }
 
-    public void runProductsMenu(){
-        this.productsMenuApresentation();
+    @Override
+    public void runMenu(){
+        this.presentation();
     }
 }

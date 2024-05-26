@@ -44,7 +44,7 @@ public class MenuController {
             case 1: // Will list all the products; Vai listar todos os produtos
                 ClearConsole.clear();
                 ProductsMenuView productsMenuView = new ProductsMenuView();
-                productsMenuView.runProductsMenu();
+                productsMenuView.runMenu();
                 break;
             case 2: // Menu Register for a new product;Menu para registro de um novo produto;
                 System.out.println("Welcome to new product register");
